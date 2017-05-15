@@ -1,0 +1,15 @@
+= form_for event do |f|
+  .form-group
+    = f.label       :event_name, 'Event Name:'
+    = f.text_field  :event_name
+
+  .form-group
+    = f.label       :event_date, 'Event Date:'
+    = f.date_field  :event_date, order:[:month, :day, :year]
+
+  .form-group
+    = f.label       :event_time, 'Event Time:'
+    = f.text_field  :event_time
+
+
+  = f.submit 'Save'
