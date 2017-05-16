@@ -2,6 +2,11 @@
 .navbar.navbar-default
   .container-fluid
     .navbar-header
-      %h3 1 Event Detail
+      .container
+        .row
+          %h3 1. Event Detail
 
-= render 'events/form', event: @event
+.container
+  .row
+    .col-xs-6
+      = render 'events/form', event: @event
