@@ -4,7 +4,10 @@
 #
 #  id         :integer          not null, primary key
 #  name       :string           not null
-#  date_time  :string           not null
+#  location   :string           not null
+#  date       :date             not null
+#  time       :time             not null
+#  workout_id :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #

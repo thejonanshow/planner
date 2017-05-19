@@ -2,13 +2,24 @@
 
   .form-group
     = f.label       :name, 'Event Name:'
-    = f.text_field  :name, class: 'form-control'
+    .text
+      = f.text_field  :name
 
   .form-group
-    = f.label :date_time
-    .input-group.date{id: 'datetimepicker1'}
-      = f.text_field :date_time, class: 'form-control'
-      %span.input-group-addon
-        %span.glyphicon.glyphicon-calendar
+    = f.label :location
+    .text
+      = f.text_field :location
+
+  .form-group
+    = f.label :date
+    .text
+      = f.text_field :date
+
+  .form-group
+    = f.label :time
+    .text
+      = f.text_field :time
+
+
 
   = f.submit 'Save'
