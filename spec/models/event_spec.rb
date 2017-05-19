@@ -3,9 +3,8 @@
 # Table name: events
 #
 #  id         :integer          not null, primary key
-#  event_name :string           not null
-#  event_date :date             not null
-#  event_time :time             not null
+#  name       :string           not null
+#  date_time  :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #

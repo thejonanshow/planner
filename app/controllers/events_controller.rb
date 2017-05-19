@@ -8,19 +8,20 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = event
+    @event = Event.new(event_params)
+
     if @event.save
       redirect_to :index
-    else
-      render :new
     end
+
 
   end
 
+
   private
 
-  def event
-    Event.new(params[:id])
+  def event_params
+    params.require(:event).permit(:name, :date_time)
   end
 
 end

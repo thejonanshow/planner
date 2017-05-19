@@ -22,7 +22,7 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 
 # Use react as the JavaScript library
-gem 'react-rails'
+# gem 'react-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -40,6 +40,9 @@ gem 'haml', '~> 5.0', '>= 5.0.1'
 gem 'annotate'
 gem 'guard-rspec', require: false
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'momentjs-rails', '~> 2.17', '>= 2.17.1'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.14.30'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
 
 group :development, :test do
