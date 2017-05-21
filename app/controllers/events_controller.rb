@@ -9,6 +9,8 @@ class EventsController < ApplicationController
 
   def create
     @event = event
+    require 'pry'; binding.pry
+
     if @event.save
       redirect_to :index
     else
