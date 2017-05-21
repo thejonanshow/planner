@@ -1,25 +1,24 @@
+%h3 Create Your Event
+%p 1. First Add Event Details
+
 = form_for event do |f|
 
   .form-group
-    = f.label       :name, 'Event Name:'
+    = f.label :name, 'Event Name:'
     .text
-      = f.text_field  :name
+      = f.text_field  :name, class: 'form-control', placeholder: 'Add Your Event Name Here'
 
   .form-group
     = f.label :location
     .text
-      = f.text_field :location
+      = f.text_field :location, class: 'form-control', placeholder: 'Location or Venue Name'
 
   .form-group
-    = f.label :date
+    = f.label :date_time
     .text
-      = f.text_field :date
-
-  .form-group
-    = f.label :time
-    .text
-      = f.text_field :time
-
+      = f.text_field :date_time, class: 'form-control', id: 'datetimepicker', placeholder: 'Date and Event Start Time'
 
 
   = f.submit 'Save'
+
+

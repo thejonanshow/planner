@@ -40,9 +40,10 @@ gem 'haml', '~> 5.0', '>= 5.0.1'
 gem 'annotate'
 gem 'guard-rspec', require: false
 gem 'bootstrap-sass', '~> 3.3.6'
-gem 'momentjs-rails', '~> 2.17', '>= 2.17.1'
-gem 'bootstrap3-datetimepicker-rails', '~> 4.14.30'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
+
 
 
 group :development, :test do
