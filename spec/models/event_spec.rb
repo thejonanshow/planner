@@ -21,18 +21,20 @@ RSpec.describe Event, type: :model do
   end
 
   it 'is not valid without event_name' do
-    event.event_name = nil
+    event.name = nil
     expect(event).not_to be_valid
   end
+
+  it 'is not valid without a location' do
+    event.location = nil
+    expect(event).not_to be_valid
+  end
+
 
   it 'is not valid without event_date ' do
-    event.event_date = nil
+    event.date_time = nil
     expect(event).not_to be_valid
   end
 
-  it 'is not valid without event_time' do
-    event.event_time = nil
-    expect(event).not_to be_valid
-  end
 
 end
