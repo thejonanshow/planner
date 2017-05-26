@@ -16,8 +16,10 @@ class Event < ApplicationRecord
   validates :name, :date_time, :location, presence: true
 
   :parse_date_time
+  
 
   private
+
 
   def parse_date_time
     self.date_time = DateTime.strptime(date_time, "%m/%d/%Y %l:%M %p")

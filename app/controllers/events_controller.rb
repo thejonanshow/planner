@@ -10,7 +10,6 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    require 'pry'; binding.pry
 
     if @event.save
       redirect_to @events
