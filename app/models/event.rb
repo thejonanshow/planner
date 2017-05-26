@@ -15,7 +15,7 @@ class Event < ApplicationRecord
 
   validates :name, :date_time, :location, presence: true
 
-  before_save :parse_date_time
+  :parse_date_time
 
   private
 
