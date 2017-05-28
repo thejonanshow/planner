@@ -6,7 +6,6 @@
 #  name       :string           not null
 #  location   :string           not null
 #  date_time  :datetime         not null
-#  workout_id :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #

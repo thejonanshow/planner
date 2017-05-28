@@ -6,7 +6,6 @@
 #  name       :string           not null
 #  location   :string           not null
 #  date_time  :datetime         not null
-#  workout_id :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -15,8 +14,7 @@ class Event < ApplicationRecord
 
   validates :name, :date_time, :location, presence: true
 
-  :parse_date_time
-  
+  # before_save :parse_date_time
 
   private
 

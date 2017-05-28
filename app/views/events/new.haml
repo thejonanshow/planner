@@ -1,12 +1,36 @@
-.navbar.navbar-default
-  .container-fluid
-    .navbar-header
-      .container
-        .row
-          %h1 Add a New Event
+-#.navbar.navbar-default
+-#  .container-fluid
+-#    .navbar-header
+-#      .container
+-#        .row
+-#          %h1 Add a New Event
+-#
+-#.container
+-#  .row
+-#    .col-xs-5
+-#      = render 'events/form', event: @event
 
-.container
-  .row
-    .col-xs-5
-      = render 'events/form', event: @event
 
+
+%h3 Create Your Event
+%p 1. First Add Event Details
+
+= form_for @event do |f|
+
+  .form-group
+    = f.label :name, 'Event Name:'
+    .text
+      = f.text_field  :name, class: 'form-control', placeholder: 'Add Your Event Name Here'
+
+  .form-group
+    = f.label :location
+    .text
+      = f.text_field :location, class: 'form-control', placeholder: 'Location or Venue Name'
+
+  .form-group
+    = f.label :date_time
+    .text
+      = f.text_field :date_time, class: 'form-control', id: 'datetimepicker', placeholder: 'Date and Event Start Time'
+
+
+  = f.submit 'Save'

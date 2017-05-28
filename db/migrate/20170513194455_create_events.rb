@@ -4,7 +4,6 @@ class CreateEvents < ActiveRecord::Migration[5.0]
       t.string    :name,        null: false
       t.string    :location,    null: false
       t.datetime  :date_time,   null: false
-      t.integer   :workout_id,    null: false
 
       t.timestamps null: false
     end
