@@ -35,7 +35,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-
+gem 'pry', '~> 0.10.4'
 gem 'haml', '~> 5.0', '>= 5.0.1'
 gem 'annotate'
 gem 'guard-rspec', require: false
