@@ -1,0 +1,14 @@
+= form_for @workout do |f|
+
+  .form-group
+    = f.label :name
+    = f.text_field :name
+
+  .form-group
+    = f.label :time_limit
+    = f.text_field :time_limit, field_name: 'Minutes'
+
+  = f.submit 'Save'
+
+
+
