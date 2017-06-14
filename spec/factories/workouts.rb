@@ -12,8 +12,8 @@
 
 FactoryGirl.define do
   factory :workout do
-    name "MyString"
-    time_limit "2017-06-11 07:00:38"
-    event_id 1
+    name "Fake Workout"
+    time_limit { DateTime.now }
+    event
   end
 end

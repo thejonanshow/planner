@@ -9,10 +9,10 @@ class WorkoutsController < ApplicationController
   end
 
   def create
-    @workout = Workout.new(new_params)
+    @workout = Workout.new(workout_params)
 
     if @workout.save
-      redirect_to :index
+      redirect_to workouts_path
     else
       render :new
     end
@@ -28,8 +28,8 @@ class WorkoutsController < ApplicationController
 
   private
 
-  def new_params
-    params.require(:workout).permit(:name, :duration, :event_id)
+  def workout_params
+    params.require(:workout).permit(:name, :time_limit, :event_id)
   end
 
   def workout

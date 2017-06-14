@@ -9,10 +9,14 @@ RSpec.describe WorkoutsController, type: :controller do
     end
   end
 
-  describe "GET #create" do
-    it "returns http success" do
-      get :create
-      expect(response).to have_http_status(:success)
+  describe "POST #create" do
+    it "returns http found (redirect, status 302)" do
+      event = FactoryGirl.create(:event)
+      workout = FactoryGirl.attributes_for(:workout, event_id: event.id)
+
+      post :create, params: { workout: workout }
+
+      expect(response).to have_http_status(:found)
     end
   end
 
@@ -23,9 +27,10 @@ RSpec.describe WorkoutsController, type: :controller do
     end
   end
 
-  describe "GET #delete" do
+  describe "DELETE #delete" do
     it "returns http success" do
-      get :delete
+      workout = FactoryGirl.create(:workout)
+      delete :destroy, params: { id: workout.id }
       expect(response).to have_http_status(:success)
     end
   end
