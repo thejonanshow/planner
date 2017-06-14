@@ -10,7 +10,7 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-
+    binding.pry
     if @event.save
       redirect_to :index
     else

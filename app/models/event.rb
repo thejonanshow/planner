@@ -15,7 +15,7 @@ class Event < ApplicationRecord
   has_many :workouts
 
   validates :name, :date_time, :location, presence: true
-  validate :parse_date_time
+  before_save :parse_date_time
 
   private
 
