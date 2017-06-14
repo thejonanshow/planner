@@ -14,6 +14,6 @@ FactoryGirl.define do
   factory :event do
     name 'Omaha Open'
     location 'Omaha'
-    date_time Date.new(2017, 7, 30)
+    date_time DateTime.now
   end
 end
